@@ -14,7 +14,7 @@ source venv/bin/activate
 pip install --upgrade pip
 Note: Ensure pip is updated in the virtual enviroment by executing the last command above. Some dependencies require the latest version of pip. Please ensure to execute all the 3 commands above
 
-# Download the required dependencies pip install -r requirements.txt Download GloVE Embeddings wget http://nlp.stanford.edu/data/glove.6B.zip
+** Download the required dependencies pip install -r requirements.txt Download GloVE Embeddings wget http://nlp.stanford.edu/data/glove.6B.zip **
 
 unzip glove*.zip
 Running the code Using the best models saved during training
