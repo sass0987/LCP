@@ -1,26 +1,45 @@
 
-# SemEval Task 1 - Lexical Complexity Prediction (https://arxiv.org/abs/2106.02340) 
+# Lexical Complexity Prediction Project for CMSC 516
 
-# Installation and Requirements 
+# Installation and Requirements
 
-Python 3.6 (Tested in this environment) Cuda 
+# •	Requirements
 
-Note - All the below commands are for a Linux system
+o	Jupyter Notebook
+o	Cuda
+•	Note - All the below commands are for a Linux system
+•	Clone this repository
+    git clone https://github.com/sass0987/Lexical-Complexity-Prediction--CMSC-516
 
-Create a Virtual Environment (Highly recommended to prevent dependency conflicts) python3 -m venv venv
+    cd Lexical-Complexity-Prediction--CMSC-516
 
-source venv/bin/activate
+Create a Virtual Environment (Highly recommended) to prevent dependency conflicts
 
-# On Windows - venv\Scripts\activate
+    pip install --upgrade pip
+    
+Note: Ensure pip is updated in the virtual environment by executing the last command above. Some dependencies require the latest version of pip.
 
-pip install --upgrade pip
+# Download the required dependencies
+    pip install -r requirements.txt
+# Download GloVE Embeddings
+    wget http://nlp.stanford.edu/data/glove.6B.zip
 
-Note: Ensure pip is updated in the virtual enviroment by executing the last command above. Some dependencies require the latest version of pip.
-Please ensure to execute all the 3 commands above
+    unzip glove*.zip
 
-** Download the required dependencies pip install -r requirements.txt Download GloVE Embeddings wget http://nlp.stanford.edu/data/glove.6B.zip **
+# Running the code
+•	Using the best models saved during training
+  o	We saved the best checkpoints during training. These models are available in the TrainedModels subdirectory.
+  o	To run the Overall Model using the best checkpoints saved, execute the below command.
+    python code.py
 
-unzip glove*.zip
+•	Retraining everything from scratch
+  o	To retrain all the constitutent models and run the whole architecture from scratch, execute the below command.
+  o	Note: Slightly different results can be obtained than reported in the report due to certain non-determinism in PyTorch computations. We tried to seed as much random number generators as possible, but some non-determinism still exists which we can't control through external arguments to PyTorch.
+Running the code (Using Google Colab Notebook)
 
+•	The Overall solution model can also be run following the instructions in below Colab Notebook
 
-Running the code (Using Google Colab Notebook) The Overall solution model can also be run following the instructions in this Colab Notebook Experiments Transformer Models and the Neighbourhood Aggregate Model with the Google Colab links are located in the Experiments subdirectory.
+# Experiments
+•	Transformer Model with the Google Colab link is located in the BERT.py file.
+Results
+
